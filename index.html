@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atividade de JavaScript sobre objetos, inspirada em conversas no WhatsApp.">
+  <title>criandoObjetos() — Atividade Alura</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=click-red">
+</head>
+
+<!-- Design: Atlas de Conversas — editorial claro, azul-tinta para código e coral para ações. -->
+<body>
+  <header class="topbar">
+    <div class="container flex-between">
+      <div class="brand" aria-label="criandoObjetos">
+        <span class="brace" aria-hidden="true">{<span class="dot"></span>}</span>
+        <strong>criandoObjetos()</strong>
+      </div>
+      <span class="badge">atividade · alura</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-text">
+        <span class="tag">javascript · programação</span>
+        <h1 id="titulo-principal">Uma conversa também pode <span class="coral">virar código.</span></h1>
+        <p>Esta atividade usa o WhatsApp como inspiração: cada contato, mensagem e grupo é um <strong>objeto</strong>, com propriedades que o descrevem e ações que mostram o que ele pode fazer.</p>
+        <div class="tokens" aria-label="Exemplos de propriedades de um objeto">
+          <span class="token">{<code>remetente: "Luiz"</code>}</span>
+          <span class="token">{<code>texto: "Oi! Como vai?"</code>}</span>
+          <span class="token">{<code>lida: false</code>}</span>
+        </div>
+        <aside class="hero-note">
+          <span>// missão do dia</span>
+          <p>Observar o cotidiano, identificar dados e transformar ideias em objetos JavaScript.</p>
+        </aside>
+      </div>
+
+      <div class="hero-code" aria-label="Exemplo de objeto mensagem em JavaScript">
+        <div class="code-header"><span class="dot-live"></span> mensagem.js</div>
+        <pre><code>const mensagem = {
+  remetente: "Luiz",
+  texto: "Oi! Como vai?",
+  lida: false,
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="reflection grid-2" aria-labelledby="titulo-reflexao">
+      <div class="editorial">
+        <p class="section-tag"><span class="brace small" aria-hidden="true">{<span class="dot"></span>}</span> 01 — reflexão</p>
+        <h2 id="titulo-reflexao">O que pode virar objeto em uma conversa?</h2>
+        <p class="muted">Antes de programar, o desafio é observar um aplicativo do dia a dia e decidir quais informações fazem sentido juntas. No WhatsApp, três exemplos ajudam a enxergar essa lógica.</p>
+        <p class="object-definition"><strong>Objeto</strong><span>Um conjunto de informações e ações organizadas para representar algo.</span></p>
+      </div>
+
+      <div class="inspector-list" aria-label="Exemplos de objetos">
+        <article class="inspector">
+          <div class="code-header">contato.js <span class="obj-tag">objeto</span></div>
+          <div class="inspector-body">
+            <h3>Contato</h3>
+            <p class="muted">Tem nome e status de online — propriedades que mostram quem essa pessoa é no aplicativo.</p>
+            <div class="tokens">
+              <span class="token">{<code>nome: "Fernanda"</code>}</span>
+              <span class="token">{<code>online: true</code>}</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="inspector">
+          <div class="code-header">mensagem.js <span class="obj-tag">objeto</span></div>
+          <div class="inspector-body">
+            <h3>Mensagem</h3>
+            <p class="muted">Guarda o texto, a hora de envio e também informa se a pessoa já leu o conteúdo.</p>
+            <div class="tokens">
+              <span class="token">{<code>remetente: "Luiz"</code>}</span>
+              <span class="token">{<code>lida: false</code>}</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="inspector">
+          <div class="code-header">grupo.js <span class="obj-tag">objeto</span></div>
+          <div class="inspector-body">
+            <h3>Grupo</h3>
+            <p class="muted">Reúne vários contatos e possui características próprias, como nome e quantidade de participantes.</p>
+            <div class="tokens">
+              <span class="token">{<code>nome: "Turma 3ºA"</code>}</span>
+              <span class="token">{<code>membros: 40</code>}</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="playground" aria-labelledby="titulo-playground">
+    <div class="container">
+      <p class="section-tag">02 — laboratório · teste os objetos</p>
+      <h2 id="titulo-playground">Execute o objeto e veja o que ele sabe fazer.</h2>
+      <p class="muted max-w">O objeto <code class="code-inline">mensagem</code> reúne quatro propriedades e um método. Clique em <code class="code-inline green">rodar</code> para conferir o resultado no terminal.</p>
+
+      <div class="grid-2">
+        <article class="window">
+          <div class="window-bar">
+            <span class="dots" aria-hidden="true"><span class="r"></span><span class="y"></span><span class="g"></span></span>
+            <span class="window-title">mensagem.js</span>
+            <button class="run-btn" type="button" onclick="rodarMensagem()">▶ rodar</button>
+          </div>
+          <pre><code><span class="kw">const</span> <span class="var">mensagem</span> = {
+  <span class="key">remetente</span>: <span class="str">"Luiz"</span>,
+  <span class="key">texto</span>: <span class="str">"Oi! Como vai?"</span>,
+  <span class="key">horaEnvio</span>: <span class="str">"15:30"</span>,
+  <span class="key">lida</span>: <span class="bool">false</span>,
+  <span class="key">exibirStatus</span>() {
+    <span class="kw">return</span> <span class="kw">this</span>.lida ? <span class="str">"Mensagem lida"</span> : <span class="str">"Mensagem entregue"</span>;
+  },
+};</code></pre>
+          <div id="console-mensagem" class="console hidden" aria-live="polite"></div>
+        </article>
+
+        <article class="window">
+          <div class="window-bar">
+            <span class="dots" aria-hidden="true"><span class="r"></span><span class="y"></span><span class="g"></span></span>
+            <span class="window-title">contato.js</span>
+            <button class="run-btn" type="button" onclick="rodarContato()">▶ rodar</button>
+          </div>
+          <pre><code><span class="kw">const</span> <span class="var">contato</span> = {
+  <span class="key">nome</span>: <span class="str">"Fernanda Mascheti"</span>,
+  <span class="key">online</span>: <span class="bool">true</span>,
+  <span class="key">apresentar</span>() {
+    <span class="kw">return</span> <span class="kw">this</span>.nome + <span class="str">" está online agora"</span>;
+  },
+};</code></pre>
+          <div id="console-contato" class="console hidden" aria-live="polite"></div>
+        </article>
+      </div>
+
+      <article class="window interact">
+        <div class="interact-head">
+          <div>
+            <h3>Interaja: marque a mensagem como lida</h3>
+            <p class="muted">Alterar uma propriedade muda o comportamento do método <code class="code-inline">exibirStatus()</code>.</p>
+          </div>
+          <button id="btn-lida" class="btn-outline" type="button" onclick="alternarLida()">▶ Marcar como lida</button>
+        </div>
+        <pre class="result-box"><code><span class="var">mensagem</span>.lida = <span class="bool">false</span> → <span class="ok">"Mensagem entregue"</span></code></pre>
+      </article>
+    </div>
+  </section>
+
+  <section class="question-lab" aria-labelledby="titulo-pergunta">
+    <div class="container">
+      <p class="section-tag">03 — desafio · mostra pergunta</p>
+      <div class="question-layout">
+        <div>
+          <h2 id="titulo-pergunta">Agora, transforme dados em uma pergunta.</h2>
+          <p class="muted">A função <code class="code-inline">mostraPergunta()</code> recebe um objeto, cria o título e monta cada alternativa diretamente na página.</p>
+        </div>
+        <div class="question-card" id="area-pergunta" aria-live="polite">
+          <div class="question-card-top">
+            <span class="question-label">pergunta.js</span>
+            <span class="question-count" id="contador-pergunta">01 / 02</span>
+          </div>
+          <label class="name-field" for="nome-usuario">Como você quer ser chamado?</label>
+          <div class="name-entry">
+            <input id="nome-usuario" type="text" placeholder="Digite seu nome" maxlength="30" autocomplete="given-name">
+            <button id="btn-salvar-nome" class="name-button" type="button">salvar</button>
+          </div>
+          <p id="saudacao-usuario" class="user-greeting" aria-live="polite">Seu resultado aparecerá aqui no final.</p>
+          <h3 id="texto-pergunta">Carregando pergunta...</h3>
+          <div id="alternativas" class="alternatives" role="group" aria-label="Alternativas da pergunta"></div>
+          <p id="feedback-pergunta" class="question-feedback" aria-live="polite"></p>
+          <button id="btn-proxima-pergunta" class="run-btn next-question" type="button">↻ mostrar outra pergunta</button>
+          <div id="resultado-final" class="final-result hidden" aria-live="polite">
+            <span class="final-kicker">resultado da missão</span>
+            <h3 id="resultado-titulo"></h3>
+            <p id="resultado-texto"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container flex-between">
+      <div class="brand"><span class="brace" aria-hidden="true">{<span class="dot"></span>}</span> criandoObjetos() · atividade Alura Start</div>
+      <small>feito por Luiz · 2026</small>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
