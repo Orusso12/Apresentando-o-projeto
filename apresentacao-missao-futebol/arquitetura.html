@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: #0D2B26;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 80px;
+      position: relative;
+    }
+
+    .header {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .accent-bar {
+      width: 64px;
+      height: 6px;
+      background: #B4F43A;
+    }
+
+    .architecture-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .column {
+      background: #153D36;
+      border: 1px solid #235A51;
+      border-radius: 12px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .column-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .column-header i {
+      color: #B4F43A;
+      font-size: 24px;
+    }
+
+    .column-header h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      color: #FFFFFF;
+    }
+
+    .file-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      background: #061614;
+      color: #B4F43A;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .column p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #9DBEB7;
+      margin-bottom: 20px;
+    }
+
+    .code-snippet {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      background: #061614;
+      padding: 16px;
+      border-radius: 8px;
+      color: #9DBEB7;
+      margin-top: auto;
+    }
+
+    .code-snippet span { color: #B4F43A; }
+
+    .footer {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .motif {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      color: #B4F43A;
+      font-weight: 700;
+    }
+
+    .page-num {
+      color: #9DBEB7;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <h2>Como o projeto foi construído</h2>
+      <div class="accent-bar"></div>
+    </div>
+
+    <div class="architecture-grid">
+      <!-- HTML -->
+      <div class="column">
+        <div class="column-header">
+          <i class="fas fa-file-code"></i>
+          <h3>Estrutura</h3>
+        </div>
+        <div class="file-tag">index.html</div>
+        <p>Define o esqueleto do quiz, organizando as seções de boas-vindas, perguntas e resultados em containers semânticos.</p>
+        <div class="code-snippet">
+          &lt;section id=<span>"quiz"</span>&gt;<br>
+          &nbsp;&nbsp;&lt;h2 id=<span>"question"</span>&gt;&lt;/h2&gt;<br>
+          &lt;/section&gt;
+        </div>
+      </div>
+
+      <!-- CSS -->
+      <div class="column">
+        <div class="column-header">
+          <i class="fas fa-palette"></i>
+          <h3>Estilo</h3>
+        </div>
+        <div class="file-tag">style.css</div>
+        <p>Implementa a identidade visual responsiva, utilizando variáveis para cores e transições suaves para o feedback do usuário.</p>
+        <div class="code-snippet">
+          :root {<br>
+          &nbsp;&nbsp;--green-500: <span>#16b364</span>;<br>
+          &nbsp;&nbsp;--lime: <span>#d7f542</span>;<br>
+          }
+        </div>
+      </div>
+
+      <!-- JS Módulos -->
+      <div class="column">
+        <div class="column-header">
+          <i class="fas fa-cubes"></i>
+          <h3>Lógica</h3>
+        </div>
+        <div class="file-tag">questions.js & script.js</div>
+        <p>Utiliza módulos ES6 para separar o banco de perguntas da lógica de controle, garantindo um código limpo e fácil de manter.</p>
+        <div class="code-snippet">
+          <span>import</span> { questionBank }<br>
+          <span>from</span> './questions.js';<br>
+          questionBank.map(...);
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="motif">/_</div>
+      <div class="page-num">04</div>
+    </div>
+  </div>
+</body>
+</html>

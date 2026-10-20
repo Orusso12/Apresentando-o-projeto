@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: #0D2B26;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    /* Background Elements */
+    .bg-circle {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(180, 244, 58, 0.05) 0%, transparent 70%);
+      border-radius: 50%;
+      top: -200px;
+      right: -100px;
+    }
+
+    .hero-layout {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 80px;
+      padding-top: 48px;
+    }
+
+    .text-side {
+      flex: 1.2;
+    }
+
+    .visual-side {
+      flex: 0.8;
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 88px;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 24px;
+    }
+
+    h1 span {
+      color: #B4F43A;
+      display: block;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      color: #9DBEB7;
+      margin-bottom: 48px;
+      font-weight: 400;
+      max-width: 600px;
+      line-height: 1.4;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 16px;
+    }
+
+    .badge {
+      background: #153D36;
+      border: 1px solid #235A51;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #B4F43A;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mockup {
+      width: 420px;
+      height: 300px;
+      background: #153D36;
+      border: 2px solid #235A51;
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+    }
+
+    .mockup-header {
+      height: 40px;
+      border-bottom: 1px solid #235A51;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 8px;
+    }
+
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #235A51; }
+
+    .mockup-content {
+      padding: 32px;
+    }
+
+    .mockup-title {
+      height: 20px;
+      width: 70%;
+      background: #235A51;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+
+    .mockup-option {
+      height: 44px;
+      width: 100%;
+      border: 1px solid #235A51;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .mockup-option.active {
+      border-color: #B4F43A;
+      background: rgba(180, 244, 58, 0.05);
+    }
+
+    .footer {
+      padding: 48px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .motif {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      color: #B4F43A;
+      font-weight: 700;
+    }
+
+    .author {
+      text-align: right;
+      font-size: 16px;
+      color: #9DBEB7;
+    }
+
+    .author strong { color: #FFFFFF; display: block; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="bg-circle"></div>
+    
+    <div class="hero-layout">
+      <div class="text-side">
+        <h1>MISSÃO <span>FUTEBOL</span></h1>
+        <p class="subtitle">Um quiz interativo construído com técnicas computacionais avançadas, JavaScript modular e foco na experiência do usuário.</p>
+        
+        <div class="badge-row">
+          <div class="badge">
+            <i class="fas fa-code"></i> JavaScript ES6+
+          </div>
+          <div class="badge">
+            <i class="fas fa-layer-group"></i> Design Modular
+          </div>
+        </div>
+      </div>
+      
+      <div class="visual-side">
+        <div class="mockup">
+          <div class="mockup-header">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-title"></div>
+            <div class="mockup-option"></div>
+            <div class="mockup-option active"></div>
+            <div class="mockup-option"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="motif">/_</div>
+      <div class="author">
+        Apresentação do Projeto
+        <strong>Curso: Técnicas Computacionais Alura</strong>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: #0D2B26;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 80px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .bg-accent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 400px;
+      background: radial-gradient(ellipse at center, rgba(180, 244, 58, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 64px;
+      color: #B4F43A;
+      margin-bottom: 24px;
+    }
+
+    .question-box {
+      background: #153D36;
+      border: 2px solid #B4F43A;
+      border-radius: 16px;
+      padding: 48px 64px;
+      max-width: 900px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+      margin-bottom: 64px;
+    }
+
+    .question-text {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 32px;
+    }
+
+    .demo-hint {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      justify-content: center;
+      color: #9DBEB7;
+      font-size: 20px;
+    }
+
+    .demo-hint i {
+      color: #B4F43A;
+      font-size: 24px;
+    }
+
+    .interaction-steps {
+      display: flex;
+      gap: 48px;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .step-icon {
+      width: 64px;
+      height: 64px;
+      background: #153D36;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #B4F43A;
+      border: 1px solid #235A51;
+    }
+
+    .step-text {
+      font-size: 16px;
+      color: #9DBEB7;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 48px;
+      left: 80px;
+      right: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .motif {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      color: #B4F43A;
+      font-weight: 700;
+    }
+
+    .page-num {
+      color: #9DBEB7;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="bg-accent"></div>
+    
+    <h2>Momento de Interação</h2>
+    
+    <div class="question-box">
+      <p class="question-text">"Quem aqui sabe qual a duração oficial de uma partida de futebol sem acréscimos?"</p>
+      <div class="demo-hint">
+        <i class="fas fa-play-circle"></i>
+        <span>Vamos testar isso agora no aplicativo!</span>
+      </div>
+    </div>
+
+    <div class="interaction-steps">
+      <div class="step">
+        <div class="step-icon">1</div>
+        <div class="step-text">Clique em "Entrar"</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">2</div>
+        <div class="step-text">Localize a pergunta</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">3</div>
+        <div class="step-text">Veja o feedback visual</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="motif">/_</div>
+      <div class="page-num">05</div>
+    </div>
+  </div>
+</body>
+</html>

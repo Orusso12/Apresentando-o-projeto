@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: #0D2B26;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 80px;
+      position: relative;
+    }
+
+    .header {
+      margin-bottom: 48px;
+      padding-top: 0;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 48px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .accent-bar {
+      width: 64px;
+      height: 6px;
+      background: #B4F43A;
+    }
+
+    .content-zone {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .text-block {
+      padding-top: 20px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 1.6;
+      color: #9DBEB7;
+      margin-bottom: 32px;
+    }
+
+    .concept-card {
+      background: #153D36;
+      border: 1px solid #235A51;
+      border-radius: 12px;
+      padding: 40px;
+    }
+
+    h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      color: #B4F43A;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      font-size: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      color: #FFFFFF;
+    }
+
+    li i {
+      color: #B4F43A;
+      font-size: 18px;
+      width: 24px;
+    }
+
+    .footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .motif {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      color: #B4F43A;
+      font-weight: 700;
+    }
+
+    .page-num {
+      color: #9DBEB7;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="header">
+      <h2>Do conteúdo à experiência</h2>
+      <div class="accent-bar"></div>
+    </div>
+
+    <div class="content-zone">
+      <div class="text-block">
+        <p>O desafio central do projeto foi criar uma interface que tornasse o aprendizado sobre os fundamentos do futebol algo leve, dinâmico e tecnicamente robusto.</p>
+        <p>Não se trata apenas de perguntas e respostas, mas de construir um fluxo lógico onde o usuário se sinta em uma "missão" de conhecimento.</p>
+      </div>
+
+      <div class="concept-card">
+        <h3><i class="fas fa-bullseye"></i> Pilares do Projeto</h3>
+        <ul>
+          <li><i class="fas fa-check"></i> Interatividade em Tempo Real</li>
+          <li><i class="fas fa-check"></i> Feedback Instantâneo Visual</li>
+          <li><i class="fas fa-check"></i> Código Limpo e Escalável</li>
+          <li><i class="fas fa-check"></i> Acessibilidade e Clareza</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="motif">/_</div>
+      <div class="page-num">02</div>
+    </div>
+  </div>
+</body>
+</html>

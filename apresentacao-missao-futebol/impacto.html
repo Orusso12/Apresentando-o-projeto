@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: #0D2B26;
+      color: #FFFFFF;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 80px;
+      position: relative;
+    }
+
+    .bg-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(13, 43, 38, 1) 0%, rgba(21, 61, 54, 1) 100%);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 72px;
+      color: #B4F43A;
+      margin-bottom: 32px;
+      line-height: 1.1;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .text-section p {
+      font-size: 28px;
+      line-height: 1.5;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+    }
+
+    .text-section span {
+      display: block;
+      font-size: 20px;
+      color: #9DBEB7;
+      border-left: 4px solid #B4F43A;
+      padding-left: 24px;
+      margin-top: 40px;
+    }
+
+    .cta-box {
+      background: #153D36;
+      border: 1px solid #235A51;
+      border-radius: 20px;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .cta-box i {
+      font-size: 64px;
+      color: #B4F43A;
+      margin-bottom: 24px;
+    }
+
+    .cta-box h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      color: #9DBEB7;
+      font-size: 18px;
+    }
+
+    .footer {
+      position: relative;
+      z-index: 2;
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .motif {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 24px;
+      color: #B4F43A;
+      font-weight: 700;
+    }
+
+    .thanks {
+      font-family: 'Space Grotesk', sans-serif;
+      color: #B4F43A;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-container">
+    <div class="bg-gradient"></div>
+    
+    <div class="content">
+      <h2>Impacto:<br>Aprender Jogando</h2>
+      
+      <div class="impact-grid">
+        <div class="text-section">
+          <p>O "Missão Futebol" demonstra que a gamificação, aliada ao código estruturado, transforma a retenção de conhecimento.</p>
+          <span>O projeto gera reflexão sobre o uso da IA e da computação para criar ferramentas educacionais mais humanas e envolventes.</span>
+        </div>
+        
+        <div class="cta-box">
+          <i class="fas fa-rocket"></i>
+          <h3>Próximos Passos</h3>
+          <p>Expansão de temas, ranking global e integração com novas APIs educacionais.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="motif">/_</div>
+      <div class="thanks">Obrigado!</div>
+    </div>
+  </div>
+</body>
+</html>
